@@ -87,9 +87,9 @@ git diff --cached --name-only          # 鍵がコミット予定になければ
 
 ```bash
 # 通常はこちら：自己署名証明書を信頼先として渡し、検証する
-curl --cacert cert.pem https://127.0.0.1:3001/
+curl --cacert cert.pem https://localhost:3001/   # 証明書の名前（localhost）で接続する
 # Phase 3.3 の比較でだけ：検証なし
-curl -k https://127.0.0.1:3001/
+curl -k https://localhost:3001/
 ```
 
 「動かないから `-k` を付ける」のは、問題を隠すだけで解決にはなりません。その癖を実務に持ち込まないことが大切です。
